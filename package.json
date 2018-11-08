@@ -1,0 +1,31 @@
+{
+  "name": "kvl-demo",
+  "version": "1.0.0",
+  "description": "演示项目",
+  "main": "index.js",
+  "keywords": [
+    "nodejs",
+    "express",
+    "typescript"
+  ],
+  "author": "maskletter",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maskletter/kvl-demo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "kvl dev"
+  },
+  "devDependencies": {
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.1"
+  },
+  "dependencies": {
+    "typescript": "^3.1.3",
+    "@types/node": "^10.11.2",
+    "@types/express": "^4.16.0",
+    "kvl": "0.0.4"
+  }
+}
