@@ -6,8 +6,7 @@ kvl架构演示项目
 $ npm install kvl@latest -g
 //快速创建项目
 $ kvl init [项目名称]
-//安装包文件
-$ npm install
+$ cd [项目名称]
 //启动项目
 $ kvl dev
 ```
