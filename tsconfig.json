@@ -1,19 +1,21 @@
+
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist",
     "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
     "noErrorTruncation": true,
     "allowJs": true,
-    "emitDecoratorMetadata": true,
     "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false,
+    "strict": true,
+    "noImplicitAny": true, //在表达式和声明上有隐含的'any'类型时报错。
     "target": "es5",
-    "rootDir": "./src",
-    "watch": true,
+    "rootDir":"./src",      //仅用来控制输出的目录结构--outDir。
+    "outDir":"./dist",     //重定向输出目录。   
+    "watch":true,            //在监视模式下运行编译器。会监视输出文件，在它们改变时重新编译。
     "typeRoots": [
       "node_modules/@types"
     ],
