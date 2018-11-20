@@ -19,9 +19,11 @@
     "dev": "kvl dev"
   },
   "devDependencies": {
+    "@types/compression": "0.0.36",
+    "compression": "^1.7.3",
     "express-session": "^1.15.6",
     "formidable": "^1.2.1",
-    "kvl": "0.0.39"
+    "kvl": "0.0.43"
   },
   "dependencies": {
     "@types/express": "^4.16.0",
