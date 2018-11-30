@@ -1,5 +1,5 @@
 
-import * as Kvl from 'kvl';
+import Kvl from 'kvl';
 
 export const UserInterceptor: Kvl.Interceptors = [
 	function(req: Kvl.Request, res: Kvl.Response, next: Function){

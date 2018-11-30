@@ -1,5 +1,5 @@
 
-import * as Kvl from 'kvl';
+import Kvl from 'kvl';
 
 export default function(req: Kvl.Request, res: Kvl.Response){
 

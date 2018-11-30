@@ -1,5 +1,5 @@
 
-import * as Kvl from 'kvl';
+import Kvl from 'kvl';
 import { config } from 'kvl';
 
 

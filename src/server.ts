@@ -1,5 +1,5 @@
 
-import * as Kvl from 'kvl';
+import Kvl from 'kvl';
 import { MainKvl ,Router, config, ValidationDone } from 'kvl';
 import UserRouter from './router/user.router'
 import HomeClass from './router/main.router'
@@ -40,7 +40,7 @@ module Main {
 	}
 	
 
-	const { app, server } = MainKvl({
+	const { app, httpServer } = MainKvl({
 		port: 8080,
 		router: [ UserRouter, HelloWord ],
 		useThis: true,

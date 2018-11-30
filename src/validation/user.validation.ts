@@ -1,4 +1,4 @@
-import * as Kvl from 'kvl';
+import Kvl from 'kvl';
 
 export const Login_Validation: Kvl.Validation = {
 

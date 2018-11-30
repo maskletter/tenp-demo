@@ -1,5 +1,5 @@
 
-import * as Kvl from 'kvl';
+import Kvl from 'kvl';
 import { Router, config } from 'kvl';
 import { Login_Validation, UserInfo_Validation } from '../validation/user.validation'
 import { UserInterceptor } from '../interceptor/user.interceptor'
