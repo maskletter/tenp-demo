@@ -1,9 +1,8 @@
-
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "src",
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": false,
     "noErrorTruncation": true,
     "allowJs": true,
@@ -11,13 +10,19 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "strict": true,
-    "noImplicitAny": true, 
+    "alwaysStrict": false,
+    "noImplicitUseStrict": false,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": false,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
     "target": "es5",
-    "rootDir":"./src",      
-    "outDir":"./dist",     
-    "watch":true,            
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "watch": true,
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "./types"
     ],
     "lib": [
       "es2016",

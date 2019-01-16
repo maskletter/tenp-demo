@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文件列表</title>
+    <style>
+        *{ margin: 0px;padding: 0px; }
+        html{ background: #f5f5f5; }
+        h4{ max-width: 700px;width: 90%;margin: 15px auto 0;color: #666;display: block }
+        ul{ max-width: 700px;width: 90%;margin: 0 auto;overflow: hidden;padding: 10px 0; }
+        li{ list-style: none;float: none; }
+        a{ text-decoration: none;color: #666;display: flex;align-items: center;padding: 5px 10px;height: 40px;font-size: 13px; 
+            border: 1px solid rgba(0,0,0,0.06);margin-right: 5px;margin-bottom: 5px;background: #f9f9f9;position: relative;
+        }
+        a:hover{ background: #fff; }
+        a>img{ width: 25px;margin-right: 5px; }
+        a.file>img{ width: 20px;margin-right: 8px;margin-left: 2px; }
+        .preview{ position: absolute;right: 0px;top: 0px;padding: 2px 4px;background: rgba(0,0,0,0.06);font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    {{if target.code }}
+        <h1>404</h1>
+    {{else }}
+    <h4>文本文件默认utf-8编码</h4>
+    <ul>
+        {{if !root}}
+            <li>
+                    <a href="javascript:void(0)" onclick="history.back()"><img src="/img/folder-return.png" alt="">../</a>
+            </li>
+        {{/if}}
+        {{each target}}
+            
+            <li>
+                {{if $value.directory}}
+                    <a href="{{baseUrl}}/{{$value.name}}" ><img src="/img/folder.png" alt=""> {{$value.name}}</a>
+                {{else}}
+                    <a class="file" href="{{baseUrl}}/{{$value.name}}" target="_blank">
+                        <img src="/img/filetype.png" alt=""> {{$value.name}}
+                        {{if $value.name.split('.').pop() == 'html'}}
+                            <p class="preview" onclick="window.open('{{baseUrl}}/{{$value.name}}?show=html');return false;">预览</p>
+                        {{/if}}
+                    </a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</body>
+</html>
