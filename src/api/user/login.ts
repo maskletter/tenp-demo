@@ -4,7 +4,7 @@
  * 登录
  */
 
-export default (req: kvl.Request, res: kvl.Response): void =>  {
+export default (req: tenp.Request, res: tenp.Response): void =>  {
     const session: any = req.session;
     session.userinfo = {
         username: req.body.username,

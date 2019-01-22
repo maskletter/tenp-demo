@@ -1,8 +1,6 @@
-import kvl from "kvl";
 
 
-
-export const Login: kvl.Validation = {
+export const Login: tenp.Validation = {
 
     username: {
         name: '用户名'
@@ -12,7 +10,7 @@ export const Login: kvl.Validation = {
         name: '密码'
     },
 
-    done(err: kvl.ValidationError, res: kvl.Response){
+    done(err: tenp.ValidationError, res: tenp.Response){
         res.status(400).json({
             code: 0,
             msg: `${err.name}异常`

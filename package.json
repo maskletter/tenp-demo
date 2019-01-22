@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "kvl dev",
-    "dev:build": "kvl dev --build",
-    "serve": "kvl serve",
-    "serve:build": "kvl serve --build",
+    "dev": "tenp dev",
+    "dev:build": "tenp dev --build",
+    "serve": "tenp serve",
+    "serve:build": "tenp serve --build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -22,6 +22,7 @@
     "@types/node": "^10.11.2"
   },
   "dependencies": {
+    "@tenp/core": "0.0.5",
     "@types/compression": "0.0.36",
     "art-template": "^4.13.2",
     "compression": "^1.7.3",
@@ -31,7 +32,6 @@
     "file-type": "^10.7.0",
     "formidable": "^1.2.1",
     "iconv-lite": "^0.4.24",
-    "kvl": "0.0.62",
     "typescript": "^3.2.2"
   }
 }

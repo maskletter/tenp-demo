@@ -1,14 +1,13 @@
-import kvl, { Router, config } from "kvl";
-import Login from 'api/user/login'
+import tenp, { Router, config } from "@tenp/core";
 
 
 @Router({
     url: '/system'
 })
-export default class BasisRouter extends kvl {
+export default class BasisRouter extends tenp {
 
     @config({ type: ['get','post'], url: '/hello', name: '系统设置' })
-    private hello(req: kvl.Request, res: kvl.Response): void {
+    private hello(req: tenp.Request, res: tenp.Response): void {
         res.send('<h1>System Hello</h1>')
     }
 

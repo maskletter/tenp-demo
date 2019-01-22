@@ -5,7 +5,7 @@
  * @param req 
  * @param res 
  */
-export const UserLoginInterceptor = (req: kvl.Request, res: kvl.Response) => {
+export const UserLoginInterceptor = (req: tenp.Request, res: tenp.Response) => {
     if(!(req.session as any).userinfo){
         res.send(`
             <script>
@@ -20,6 +20,5 @@ export const UserLoginInterceptor = (req: kvl.Request, res: kvl.Response) => {
         // })
         return false;
     }
-    // console.log(req.url)
-    // console.log((req.session as any).userinfo)
+
 }

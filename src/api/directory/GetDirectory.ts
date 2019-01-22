@@ -1,4 +1,4 @@
-import kvl from "kvl";
+import tenp from "@tenp/core";
 import * as directory from 'directory.json'
 import Directory from "method/directory";
 
@@ -8,7 +8,7 @@ const getFileUrl = (url: string) => {
 }
 
 //返回文件内容
-const getFilesContent = (res: kvl.Response,url: string, isShow?: string): void => {
+const getFilesContent = (res: tenp.Response,url: string, isShow?: string): void => {
 
     
     const result: any = Directory.getFilesContent(url);
@@ -29,7 +29,7 @@ const getFilesContent = (res: kvl.Response,url: string, isShow?: string): void =
 
 
 //渲染页面
-export const RenderHtml = (req: kvl.Request, res: kvl.Response): void => {
+export const RenderHtml = (req: tenp.Request, res: tenp.Response): void => {
     
     const url = getFileUrl(req.url).replace(`/directory/files-html/${req.params.index}`, '');
     //获取绝对路径
@@ -52,7 +52,7 @@ export const RenderHtml = (req: kvl.Request, res: kvl.Response): void => {
 }
 
 //返回json
-export default (req: kvl.Request, res: kvl.Response): void => {
+export default (req: tenp.Request, res: tenp.Response): void => {
 
     const url = getFileUrl(req.url).replace(`/directory/files/${req.params.index}`, '');
     //获取绝对路径
