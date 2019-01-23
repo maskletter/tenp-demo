@@ -5,6 +5,8 @@ import * as directory from 'directory.json'
 import * as fileType from 'file-type'
 export default class Directory {
 
+    public static cwd: string = process.cwd();
+
     /**
      * 获取目录
      * @param index 
@@ -39,7 +41,7 @@ export default class Directory {
      * @param url 
      */
     public static getPath(index: number, url: string): string {
-        return decodeURIComponent(path.join(directory[index] || (index as any),url))
+        return decodeURIComponent(path.join(Directory.cwd, directory[index] || (index as any),url))
     }
 
     /**
